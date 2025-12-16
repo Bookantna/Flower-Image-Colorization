@@ -21,6 +21,8 @@ The Generator employs the **U-NET architecture**, which is effective for image s
 ### 3. Discriminator Architecture: Patch Discriminator
 The Discriminator uses a **Patch Discriminator**, which classifies whether overlapping patches of an image are real or fake, rather than classifying the entire image at once.
 
+![cGAN Architecture](https://raw.githubusercontent.com/Bookantna/Flower-Image-Colorization/main/image/CGAN.jpg)
+
 ## 📊 Dataset & Data Collection
 
 * **Total Data Collection Size (Calculated):** The data collection method was structured to produce a potential 21,600 images based on 6 stems, 5 flowers, and 360 variations multiplied by 2.
