@@ -95,7 +95,9 @@ The pipeline therefore works with the **folded angle** `min(a, 360 − a)` in 0�
 | `SUBSET_FRACTION` | `0.2` | Species-stratified sample of the 21,600 variants |
 | `ANGLE_BLOCK` | `15`° | Width of the held-out unit |
 | `SPLIT_GAP` | `5`° | Exclusion band around every test angle |
-| `TEST_FRACTION` | `0.2` | Fraction of angle blocks held out |
+| `TEST_FRACTION` | `0.2` | Requested share of angle blocks held out |
+
+`TEST_FRACTION` is a request, not an exact count: `GroupShuffleSplit` rounds up to whole groups, so the default 0.2 across 12 blocks (`180° ÷ 15°`) holds out **3 blocks — 25%** — rather than a fractional 2.4.
 
 ## Model architecture
 
